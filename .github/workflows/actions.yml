@@ -10,8 +10,14 @@ jobs:
         shell: bash
         run: |
           pwd
-          ls
-
+          ls -a
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: List files after checkout
+        shell: bash
+        run: |
+          pwd
+          ls -a
       - name: Simple JS Action
         id: greet
         uses: actions/javascript-action@v1
